@@ -46,3 +46,22 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## 学习笔记
+
+2-5 【扩展学习】Mock 方案对比【更多 IT 教程 微信 z2018005801】.png
+
+### 对比 mock 方案
+
+1. 代码侵入
+2. 请求拦截
+
+例如 Mock.js 原理： 重写 XMLHttpRequest
+
+`优点：`
+
+1. 与前端代码分离
+2. 可生成随机数据
+
+`缺点`
+
+1. 数据都是动态生成的假数据，无法真实模拟增删改查
+2. 只支持 ajax,不支持 fetch
