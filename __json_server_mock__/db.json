@@ -3,6 +3,14 @@
     {
       "id": 1,
       "name": "张伟"
+    },
+    {
+      "id": 2,
+      "name": "张三"
+    },
+    {
+      "id": 3,
+      "name": "李四"
     }
   ],
   "projects": [
@@ -10,6 +18,20 @@
       "id": 1,
       "name": "骑手管理",
       "personId": 1,
+      "organization": "外卖组",
+      "created": 1604989757139
+    },
+    {
+      "id": 2,
+      "name": "团购APP",
+      "personId": 2,
+      "organization": "兄天秤",
+      "created": 1604989757139
+    },
+    {
+      "id": 3,
+      "name": "物料管理",
+      "personId": 3,
       "organization": "外卖组",
       "created": 1604989757139
     }
