@@ -65,3 +65,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 1. 数据都是动态生成的假数据，无法真实模拟增删改查
 2. 只支持 ajax,不支持 fetch
+
+## 用 Custom Hook 提取并服用组件代码
+
+> 自定义 hook 一定要以 use 开头
