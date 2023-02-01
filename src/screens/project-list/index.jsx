@@ -14,8 +14,10 @@ export const ProjectListScreen = () => {
   const [users, setUsers] = useState([])
 
   const debounceParam = useDebounce(param, 2000)
+  // console.log('debounceParam', debounceParam)
 
   useEffect(() => {
+    console.log('请求接口了，此时的debounceParam', debounceParam)
     fetch(`${apiUrl}/projects?${qs.stringify(cleanObject(debounceParam))}`).then(async (response) => {
       if (response.ok) {
         setList(await response.json())

@@ -69,3 +69,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## 用 Custom Hook 提取并服用组件代码
 
 > 自定义 hook 一定要以 use 开头
+> react 18 以后的版本 在开发模式 严格模式下 useEffect 会执行两次
