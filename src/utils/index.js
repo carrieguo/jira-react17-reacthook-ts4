@@ -23,27 +23,30 @@ export const useMount = (callback) => {
   }, [])
   // console.log('useMount')
 }
+
+//请求调用 防抖
+/*防抖写法一 promise */
 // let time
 // let val
-// // //请求调用 防抖
 // export const useDebounce = (value, delay) => {
-//   console.log('useDebounce')
-
 //   if (time) {
 //     clearTimeout(time)
 //   }
-//   time = setTimeout(() => {
-//     console.log('setTimeout')
-//     val = value
-//   }, delay)
-//   console.log('return val', val)
-//   return val
+//   let promise = new Promise(function(resolve, reject) {
+//     time = setTimeout(() => {
+//       val = value
+//       resolve(val);
+//     }, delay);
+//   });
+//   return promise;
 // }
+
+/*防抖写法二 useEffect */
 export const useDebounce = (value, delay) => {
-  console.log('useDebounce')
+  console.log('useDebounce', value, delay)
   const [debouncedValue, setDebouncedValue] = useState(value)
   useEffect(() => {
-    //每次再value和delay变化以后，设置一个定时器
+    //每次再value和delay变化以后，设置一个定时器,更新debouncedValue
     const timeout = setTimeout(() => {
       console.log('setTimeout')
       setDebouncedValue(value)
@@ -53,6 +56,6 @@ export const useDebounce = (value, delay) => {
       clearTimeout(timeout)
     }
   }, [value, delay])
-  console.log('return val')
+  console.log('return val', value, delay)
   return debouncedValue
 }
