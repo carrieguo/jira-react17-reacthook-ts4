@@ -1,5 +1,21 @@
 import React from 'react'
-export const List = ({ list, users }) => {
+interface User {
+  id: string
+  name: string
+  email: string
+  title: string
+  organization: string
+}
+interface project {
+  id: string
+  name: string
+  personId: string
+}
+interface ListProps {
+  list: project[]
+  users: User[]
+}
+export const List = ({ list, users }: ListProps) => {
   return (
     <table>
       <thead>
@@ -10,7 +26,7 @@ export const List = ({ list, users }) => {
       </thead>
 
       <tbody>
-        {list.map((project) => (
+        {list.map((project: project) => (
           <tr key={project.id}>
             <td>{project.name}</td>
             <td>{users.find((user) => user.id === project.personId)?.name || '未知'}</td>
