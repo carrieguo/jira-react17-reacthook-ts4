@@ -70,3 +70,38 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 > 自定义 hook 一定要以 use 开头
 > react 18 以后的版本 在开发模式 严格模式下 useEffect 会执行两次
+
+### TypeScript 基本知识梳理
+
+> TypeScript 是“强类型”版的 JavaScript,当我们在代码中定义变量（包括普通变量、函数、组件、hook 等）的时候，TypeScript 允许我们在定义的同时指定其类型，这样使用者在使用不当的时候就会被及时报错提醒
+> 经常用 TypeScript 的感受：比起原来的 JavaScript,TypeScript 带来了完全不一样的开发体验，bug 大大减少了，编辑器提示快了，代码更易读了，开发速度快了
+> `TypeScript的类型`
+
+1. number
+   > 数字类型，包含小数、其他进制的数字
+2. string
+   > 字符串
+3. array
+   > 在 TS 中，array 一般指“所有元素类型相同”的值的集合
+4. boolean
+5. 函数
+6. any
+   > any 表示这个值可以是任何值，被定义为 any 就意味着不做任何类型检查
+7. void
+   > 表示函数不返回任何值或者返回 undefined
+8. object
+9. tuple
+   > tuple 是“数量固定，类型可以各异”版的数组
+10. enum
+11. null 和 undefined
+    > 在 TS 中既是一个值，也是一个类型
+12. unknown
+    > 是一个严格版的 any, 会做类型检查。unknow 不能赋值给任何变量，unknow 也不能读取任何方法
+13. never
+
+interface 不是一种类型 应该被翻译成接口，或者说使用上面介绍的类型，创建一个我们自己的类型
+
+#### .d.ts
+
+> .d.ts 文件可以让 JS 文件继续维持自己 JS 文件的身份，而拥有 TS 的类型保护
+> 一般我们写业务代码不会用到，但是点击类型跳转一般会跳到.d.ts 文件。

@@ -13,20 +13,20 @@ export const ProjectListScreen = () => {
   const [list, setList] = useState([])
   const [users, setUsers] = useState([])
 
+  /*写法一：promise--- */
+  // const [debouncedValue, setDebouncedValue] = useState(param)
+
+  // useDebounce(param, 2000).then((params: any) => {
+  //   setDebouncedValue(params)
+  //   console.log(debouncedValue)
+  // })
+  /*------写法一*/
+
+  /*写法二 useeffect---------*/
   // useEffect的检测项参数只能是state 监听state以外的变量他改变了的话页面不会从新渲染，你如果调用setState改变值的话，他页面会从新渲染的
-  /*写法一：promise
-  const [debouncedValue, setDebouncedValue] = useState(param)
-  
-  useDebounce(param, 2000).then(params=>{
-    setDebouncedValue(params)
-    console.log(debouncedValue)
-  })*/
-
-  // console.log('debounceParam', debounceParam)
-
-  /*写法二 useeffect*/
   //debounceParam 是state
-  let debouncedValue = useDebounce(param, 2000)
+  const debouncedValue = useDebounce(param, 2000)
+  /*----写法二*/
 
   useEffect(() => {
     console.log('请求接口了，此时的debounceParam', debouncedValue)
