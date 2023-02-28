@@ -45,8 +45,8 @@ export const useMount = (callback: () => void) => {
 
 /*防抖写法二 useEffect */
 // ts ?表示可以不传
-//后面用泛型规范类型
-export const useDebounce = (value: unknown, delay?: number): any => {
+//箭头函数泛型写在传入参数前，传统函数写在后
+export const useDebounce = <V>(value: V, delay?: number) => {
   console.log('useDebounce', value, delay)
   const [debouncedValue, setDebouncedValue] = useState(value)
   useEffect(() => {
