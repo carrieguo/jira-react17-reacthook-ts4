@@ -45,6 +45,12 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+pre-commit Hook
+在代码每次提交之前，自动进行格式化
+
+commitlint
+每次提交之前，检查提交注释是否符合规范
+
 ## 学习笔记
 
 2-5 【扩展学习】Mock 方案对比【更多 IT 教程 微信 z2018005801】.png
