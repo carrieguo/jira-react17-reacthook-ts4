@@ -13,5 +13,6 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   rules: {
     'react/prop-types': 0, //防止在react组件定义中缺少props验证
+    '@typescript-eslint/ban-ts-comment': 'off', //消除 Do not use “// @ts-ignore“ because it alters compilation errors
   },
 }

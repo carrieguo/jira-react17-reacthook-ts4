@@ -1,6 +1,22 @@
 import React from 'react'
+export interface User {
+  id: string
+  name: string
+  email: string
+  title: string
+  organization: string
+  token: string
+}
 
-export const SearchPanel = ({ param, setParam, users }) => {
+interface SearchPanelProps {
+  users: User[]
+  param: {
+    name: string
+    personId: string
+  }
+  setParam: (param: SearchPanelProps['param']) => void //void 表示没有返回值
+}
+export const SearchPanel = ({ param, setParam, users }: SearchPanelProps) => {
   return (
     <form>
       <input
